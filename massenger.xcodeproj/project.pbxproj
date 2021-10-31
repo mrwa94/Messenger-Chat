@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9D028FA3272EB40B0053214B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D028FA2272EB40B0053214B /* GoogleService-Info.plist */; };
+		9D028FA5272EC9610053214B /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D028FA4272EC9610053214B /* DatabaseManager.swift */; };
 		9D18AEE2272B278600645E40 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D18AEE1272B278600645E40 /* RegisterViewController.swift */; };
 		9D18AEE4272B27DF00645E40 /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D18AEE3272B27DE00645E40 /* NewConversationViewController.swift */; };
 		9D18AEE6272B27F800645E40 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D18AEE5272B27F800645E40 /* ProfileViewController.swift */; };
@@ -27,6 +28,7 @@
 		33BE9B1BCB72480F2EA61BB2 /* Pods-massenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-massenger.debug.xcconfig"; path = "Target Support Files/Pods-massenger/Pods-massenger.debug.xcconfig"; sourceTree = "<group>"; };
 		8B1D22923444C6202190767E /* Pods_massenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_massenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D028FA2272EB40B0053214B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9D028FA4272EC9610053214B /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		9D18AEE1272B278600645E40 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		9D18AEE3272B27DE00645E40 /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
 		9D18AEE5272B27F800645E40 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		9D18AEED272B290C00645E40 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9D028FA4272EC9610053214B /* DatabaseManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				9DD0A37B272946520027EDD1 /* SceneDelegate.swift in Sources */,
 				9D18AEE4272B27DF00645E40 /* NewConversationViewController.swift in Sources */,
 				9D18AEE2272B278600645E40 /* RegisterViewController.swift in Sources */,
+				9D028FA5272EC9610053214B /* DatabaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

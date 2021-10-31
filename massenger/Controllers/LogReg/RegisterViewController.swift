@@ -97,7 +97,8 @@ class RegisterViewController: UIViewController   {
  extension RegisterViewController : UIImagePickerControllerDelegate , UINavigationControllerDelegate {
     
      
-     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
+     {
          
          let editedImage = info[.originalImage] as! UIImage
          /*

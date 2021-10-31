@@ -18,6 +18,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func LogInButton(_ sender: Any) {
         signInUser()
+        
     }
     /*
   Auth.auth().signIn(withEmail: email, password: password, completion: { authResult, error in
@@ -39,6 +40,11 @@ class LoginViewController: UIViewController {
             let user = result.user
             print("logged in user: \(user)")
         }
+        
+        navigationController?.dismiss(animated: true, completion: nil)
+        
+
+
     }
     
     
