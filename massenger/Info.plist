@@ -22,8 +22,10 @@
 					<key>UISceneStoryboardFile</key>
 					<string>Main</string>
 				</dict>
+                
 			</array>
 		</dict>
 	</dict>
+    
 </dict>
 </plist>

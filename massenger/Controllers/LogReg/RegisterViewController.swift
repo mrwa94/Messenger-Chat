@@ -27,7 +27,7 @@ class RegisterViewController: UIViewController   {
         sigenUp()
         
     }
-    
+
     
     
     func sigenUp(){
@@ -39,7 +39,10 @@ class RegisterViewController: UIViewController   {
             }
             let user = result.user
             print("logged in user: \(user)")
+        
+            DatabaseManager.shared.storeDataToFirebase(fristName: self.FirstNameTextfield.text!, lastName: self.LastNameTextfield.text!)
         }
+        
         
     }
     

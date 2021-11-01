@@ -24,10 +24,10 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="c2f-O7-bgF">
-                                <rect key="frame" x="30" y="193" width="342" height="326"/>
+                                <rect key="frame" x="42" y="193" width="330" height="326"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UserName" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X5V-x3-Z5T">
-                                        <rect key="frame" x="0.0" y="0.0" width="342" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="MPb-5I-eAE"/>
                                             <constraint firstAttribute="width" constant="330" id="Qpy-Cb-NaF"/>
@@ -37,7 +37,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EA4-tw-PcY">
-                                        <rect key="frame" x="0.0" y="69" width="342" height="50"/>
+                                        <rect key="frame" x="0.0" y="69" width="330" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="330" id="Zm0-fp-fU3"/>
                                             <constraint firstAttribute="height" constant="50" id="bZW-yC-MC3"/>
@@ -47,7 +47,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SbD-Mh-DNR">
-                                        <rect key="frame" x="0.0" y="138" width="342" height="50"/>
+                                        <rect key="frame" x="0.0" y="138" width="330" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="1lp-ER-I79"/>
                                             <constraint firstAttribute="width" constant="330" id="EUP-i0-mGp"/>
@@ -63,7 +63,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6c-Ua-vVk">
-                                        <rect key="frame" x="0.0" y="207" width="342" height="50"/>
+                                        <rect key="frame" x="0.0" y="207" width="330" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="330" id="Cl7-0a-qu7"/>
                                             <constraint firstAttribute="height" constant="50" id="SGV-ia-PmK"/>
@@ -76,7 +76,7 @@
                                         </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xH6-VI-OYL">
-                                        <rect key="frame" x="0.0" y="276" width="342" height="50"/>
+                                        <rect key="frame" x="0.0" y="276" width="330" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="330" id="bqh-2Q-cBH"/>
                                             <constraint firstAttribute="height" constant="30" id="fgD-aM-d2N"/>
@@ -261,6 +261,9 @@
                                     </backgroundConfiguration>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="LogOutButton:" destination="sac-e3-1jD" eventType="touchUpInside" id="GPw-ww-amo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xIR-kj-Pkx"/>
@@ -283,7 +286,7 @@
         <!--Chats-->
         <scene sceneID="isY-Yb-1Th">
             <objects>
-                <viewController id="WJR-el-h5O" sceneMemberID="viewController">
+                <viewController id="WJR-el-h5O" customClass="ConversationViewController" customModule="massenger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rqL-ZN-oBm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

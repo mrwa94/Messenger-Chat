@@ -9,5 +9,7 @@ pod 'Firebase/Auth'
 
 pod 'Firebase/Database'
   # Pods for massenger
+    pod 'FBSDKLoginKit'
+
 
 end

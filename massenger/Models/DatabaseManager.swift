@@ -8,14 +8,17 @@
 import Foundation
 import FirebaseDatabase
 
-final  class databasemaneger {
-     static let shared = databasemaneger()
+final  class DatabaseManager {
+     static let shared = DatabaseManager()
     private let  database = Database.database().reference()  // reference the database
     
     
-    func test() {
+    func storeDataToFirebase(fristName: String , lastName: String  ) {
 
-        database.child("foo").setValue(["something": true])
+        database.child("user").setValue(["first_name": fristName ,
+                                         "last_name": lastName
+                                         
+                                        ])
         
     }
     
@@ -38,7 +41,7 @@ var safeEmail : String {
 }
 
 
-extension databasemaneger {
+extension DatabaseManager {
     
     public func  userExists (with email: String , completion: @escaping((Bool) -> Void)) {
         
@@ -64,7 +67,7 @@ extension databasemaneger {
 
     public func insertUser(with user: ChatAppUser){
           
-        database.child(user.safeEmail).setValue(["first_name":user.fristName,"last_name":user.lastName]
+        database.child(user.safeEmail).setValue(["first_name":user.fristName,"last_name":user.lastName , "Email":user.emailAddress]
           )
       }
 }
