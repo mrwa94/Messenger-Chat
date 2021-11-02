@@ -26,12 +26,35 @@ class RegisterViewController: UIViewController   {
     @IBAction func Register(_ sender: Any) {
         sigenUp()
         
+    
     }
 
+    @IBOutlet weak var checkLabel: UILabel!
     
     
     func sigenUp(){
         
+        if FirstNameTextfield.text?.isEmpty == true {
+            
+            checkLabel.text = "please Enter First Name"
+          return
+        }
+        if LastNameTextfield.text?.isEmpty == true {
+            
+            checkLabel.text = "please Enter Last Name"
+          return
+        }
+        if EmailTextfield.text?.isEmpty == true {
+            
+            checkLabel.text = "please Enter Email"
+          return
+        }
+        if PasswordTextfield.text?.isEmpty == true {
+            
+            checkLabel.text = "please Enter Password"
+          return
+        }
+
         FirebaseAuth.Auth.auth().createUser(withEmail: EmailTextfield.text!, password: PasswordTextfield.text!) { (authResult: AuthDataResult?, error: Error?) in
             guard let result = authResult, error == nil else {
                 print("Failed to log in user with email \(error?.localizedDescription)")
@@ -41,8 +64,10 @@ class RegisterViewController: UIViewController   {
             print("logged in user: \(user)")
         
             DatabaseManager.shared.storeDataToFirebase(fristName: self.FirstNameTextfield.text!, lastName: self.LastNameTextfield.text!)
+            
         }
-        
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "profile Id") else { return  }
+        self.navigationController?.pushViewController(vc, animated: true)
         
     }
     
@@ -104,12 +129,7 @@ class RegisterViewController: UIViewController   {
      {
          
          let editedImage = info[.originalImage] as! UIImage
-         /*
-         guard let img = info [UIImagePickerController.InfoKey.editedImage] as? UIImage
-         else {print ("no imge")
-             return
-         } */
-         
+    
          imgeProfile.image = editedImage
       dismiss(animated: true , completion: nil)
          

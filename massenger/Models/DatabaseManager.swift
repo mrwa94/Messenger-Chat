@@ -15,10 +15,7 @@ final  class DatabaseManager {
     
     func storeDataToFirebase(fristName: String , lastName: String  ) {
 
-        database.child("user").setValue(["first_name": fristName ,
-                                         "last_name": lastName
-                                         
-                                        ])
+        database.child("user").setValue(["first_name": fristName ,"last_name": lastName])
         
     }
     
@@ -43,7 +40,7 @@ var safeEmail : String {
 
 extension DatabaseManager {
     
-    public func  userExists (with email: String , completion: @escaping((Bool) -> Void)) {
+  /*  public func  userExists (with email: String , completion: @escaping((Bool) -> Void)) {
         
         var safeEmail = email.replacingOccurrences(of: ".", with: "-")
         safeEmail = safeEmail.replacingOccurrences(of: "@", with: "-")
@@ -63,7 +60,7 @@ extension DatabaseManager {
                   
               }
         
-}
+} */
 
     public func insertUser(with user: ChatAppUser){
           
